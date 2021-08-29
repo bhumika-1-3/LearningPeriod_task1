@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body{
+    font-family: 'Merriweather', serif;
+}
+
+.submitPost{
+   background-color: #212529; 
+   border: none;
+font-size: 1rem;
+
+}
+.fa-3x{
+    color: white;
+}
+.submitPost:hover{
+transform: scale(1.2);
+}
+
+.btn-outline-primary,.btn-outline-danger{
+    width: 60px;
+    margin: 3%;
+}
+thead tr th{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.body{
+    font-size: 1.1rem;
+}
+
+tbody td button{
+margin-top: 30px;
+}
