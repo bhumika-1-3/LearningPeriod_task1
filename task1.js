@@ -24,7 +24,7 @@ try {
    }
    taskObj=data;
    localStorage.setItem("localTask",JSON.stringify(taskObj));
-   console.log(taskObj);
+   
   output();
 } 
 catch (error) {
@@ -180,14 +180,14 @@ addingPost.addEventListener("click",async ()=>{
            taskObj=JSON.parse(webTask);
        }
        const post={
-         id:0,
-         userId:0,
+      
+        
          title:title,
          body:body,
         };
         const createdPost=await createPost();
         taskObj.unshift(post);
-        console.log(taskObj);
+        
         localStorage.setItem("localTask",JSON.stringify(taskObj));
   output(); 
       }
@@ -256,7 +256,7 @@ else{
         body:body,
         };
         taskObj[index]=post;
-        console.log(taskObj); 
+         
         const editedPost=await edit(post,index);
         console.log(editedPost);
   localStorage.setItem("localTask",JSON.stringify(taskObj));
@@ -267,7 +267,7 @@ else{
 
 //  editing using patch
  const editTitle=async (index)=>{
-  console.log(index);
+  
   let webTask =localStorage.getItem("localTask");
   if(webTask==null){
       taskObj=[];
@@ -292,9 +292,9 @@ else{
       body:taskObj[index].body,
       };
       taskObj[index]=post;
-      console.log(taskObj);
+     
       const editedPost=await editUsingPatch(post,index);
-      console.log(editedPost);
+      
   localStorage.setItem("localTask",JSON.stringify(taskObj));
   output();
       
@@ -303,7 +303,7 @@ else{
   }
 
   const editBody=async (index)=>{
-    console.log(index);
+    
     let webTask =localStorage.getItem("localTask");
     if(webTask==null){
         taskObj=[];
@@ -311,7 +311,7 @@ else{
     else{
         taskObj=JSON.parse(webTask);
     }
-    console.log(taskObj);
+    
   
   var body=prompt("body:");
   if(body==''){
@@ -328,7 +328,7 @@ else{
         body:body,
         };
         taskObj[index]=post;
-        console.log(taskObj);
+        
         const editedPost=await editUsingPatch(post,index);
         console.log(editedPost);
     localStorage.setItem("localTask",JSON.stringify(taskObj));
